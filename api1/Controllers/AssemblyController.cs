@@ -1,4 +1,5 @@
-﻿using System;
+﻿using api1.Network;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -12,6 +13,7 @@ namespace api1.Controllers
         // GET 
         public IEnumerable<string> Get()
         {
+            Email.SendSimpleMessage();
             return new string[] { "value1", "value2" };
         }
 
