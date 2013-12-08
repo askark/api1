@@ -1,4 +1,5 @@
 ﻿using api1.Network;
+using BookSleeve;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,17 @@ namespace api1.Controllers
         // GET 
         public IEnumerable<string> Get()
         {
+            List<string> list = new List<string>();
+            using (var conn = new RedisConnection("redis://rediscloud:8IoDSSPPCZPhodxK@pub-redis-18353.eu-west-1-1.2.ec2.garantiadata.com:18353"))
+            {
+                conn.Open();
+                conn.Set(0, "crawler", "Crawler0");
+                var value = conn.GetString(0, "crawler");
+                string s = conn.Wait(value);
+                list.Add(s);
+            }
             Email.SendSimpleMessage();
-            return new string[] { "value1", "value2" };
+            return list.AsEnumerable();
         }
 
         // GET api/assembly/5
@@ -31,6 +41,7 @@ namespace api1.Controllers
         // PUT api/assembly/5
         public void Put(int id, [FromBody]string value)
         {
+
         }
 
         // DELETE api/assembly/5

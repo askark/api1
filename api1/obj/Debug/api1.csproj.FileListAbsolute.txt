@@ -180,3 +180,6 @@ C:\Users\User\Documents\GitHub\api1\api1\bin\ru\System.Spatial.resources.dll
 C:\Users\User\Documents\GitHub\api1\api1\bin\zh-Hans\System.Spatial.resources.dll
 C:\Users\User\Documents\GitHub\api1\api1\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\User\Documents\GitHub\api1\api1\obj\Debug\api1.pdb
+C:\Users\User\Documents\GitHub\api1\api1\bin\BookSleeve.dll
+C:\Users\User\Documents\GitHub\api1\api1\bin\BookSleeve.pdb
+C:\Users\User\Documents\GitHub\api1\api1\bin\BookSleeve.xml
